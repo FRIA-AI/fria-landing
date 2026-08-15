@@ -1,0 +1,26 @@
+export const THEMES = {
+  dark: {
+    "--bg": "#0A0F1F", "--bg2": "#0C1226", "--card": "#13203F", "--cardsub": "#0F1836",
+    "--border": "rgba(234,240,251,.08)", "--border2": "rgba(234,240,251,.16)",
+    "--txt": "#EAF0FB", "--txt2": "#8CA0C7", "--txt3": "#7C8FB8", "--txt4": "#5F719A",
+    "--accent": "#4D8EFF", "--accent2": "#2E5BA8", "--accent3": "#7BA7EE",
+    "--okbg": "#123B2E", "--okbd": "#3ECF8E", "--coral": "#FF6B5C",
+    "--btnbg": "#4D8EFF", "--btntxt": "#0A0F1F",
+    "--navbg": "rgba(10,15,31,.88)", "--grid": "rgba(234,240,251,.028)",
+    "--shadow": "0 40px 90px rgba(0,0,0,.55)", "--cardshadow": "none",
+    "--logoedge": "rgba(234,240,251,.35)", "--glow": "rgba(77,142,255,.16)",
+    "--pillbg": "rgba(77,142,255,.10)", "--pillbd": "rgba(77,142,255,.35)",
+  },
+  light: {
+    "--bg": "#FFFFFF", "--bg2": "#F5F8FD", "--card": "#FFFFFF", "--cardsub": "#F5F8FD",
+    "--border": "rgba(10,15,31,.09)", "--border2": "rgba(10,15,31,.14)",
+    "--txt": "#0A0F1F", "--txt2": "#5C6B8A", "--txt3": "#5C6B8A", "--txt4": "#8894B3",
+    "--accent": "#2E5BA8", "--accent2": "#4D8EFF", "--accent3": "#7BA7EE",
+    "--okbg": "#E3F7ED", "--okbd": "#1D9A63", "--coral": "#D14A3C",
+    "--btnbg": "#2E5BA8", "--btntxt": "#FFFFFF",
+    "--navbg": "rgba(255,255,255,.9)", "--grid": "rgba(10,15,31,.045)",
+    "--shadow": "0 24px 60px rgba(10,15,31,.10)", "--cardshadow": "0 2px 10px rgba(10,15,31,.05)",
+    "--logoedge": "#0A0F1F", "--glow": "rgba(77,142,255,.14)",
+    "--pillbg": "rgba(77,142,255,.10)", "--pillbd": "rgba(46,91,168,.3)",
+  },
+};

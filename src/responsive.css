@@ -1,0 +1,53 @@
+:root {
+  --grid-2col: 1fr 1fr;
+  --grid-4col: repeat(4, 1fr);
+  --grid-3col: repeat(3, 1fr);
+  --hero-grid: 1.05fr .95fr;
+  --demo-grid: .85fr 1.15fr;
+  --hero-fs: 60px;
+  --page-h1-fs: 42px;
+  --section-title-fs: 34px;
+  --content-pad: 0 40px;
+  --hero-pad: 96px 40px 104px;
+  --page-pad: 76px 40px 88px;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --grid-2col: 1fr;
+    --grid-4col: repeat(2, 1fr);
+    --grid-3col: 1fr;
+    --hero-grid: 1fr;
+    --demo-grid: 1fr;
+    --hero-fs: 40px;
+    --page-h1-fs: 30px;
+    --section-title-fs: 26px;
+    --content-pad: 0 24px;
+    --hero-pad: 56px 24px 64px;
+    --page-pad: 48px 24px 56px;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --grid-4col: 1fr;
+  }
+}
+
+/* segunda variable para el grid interno del formulario de Demo, mas angosto */
+:root { --form-grid: 1fr 1fr; }
+@media (max-width: 560px) {
+  :root { --form-grid: 1fr; --grid-4col: 1fr; }
+}
+
+:root { --content-pad-x: 40px; }
+@media (max-width: 900px) { :root { --content-pad-x: 24px; } }
+
+/* En pantallas muy angostas, el CTA de "Entrar a FRIA" debe verse completo
+   siempre -- es el unico requisito funcional explicito del sitio. Se oculta
+   el toggle de tema (queda el de idioma) y se compactan botones. */
+@media (max-width: 480px) {
+  .nav-theme-toggle { display: none !important; }
+  .nav-cta { padding: 0 14px !important; font-size: 12.5px !important; }
+  .nav-lang-btn { padding: 5px 7px !important; font-size: 10.5px !important; }
+}
