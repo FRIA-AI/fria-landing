@@ -84,7 +84,7 @@ function Nav() {
             >
               {theme === 'dark' ? (lang === 'es' ? 'Claro' : 'Light') : (lang === 'es' ? 'Oscuro' : 'Dark')}
             </button>
-                    </div>
+          </div>
 
           
             className="nav-cta"
