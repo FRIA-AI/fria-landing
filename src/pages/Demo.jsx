@@ -8,6 +8,7 @@ export default function Demo() {
   const [form, setForm] = useState({ name: '', company: '', email: '', phone: '', route: '' });
   const [status, setStatus] = useState('idle'); // idle | loading | success | error
   const [fieldErrors, setFieldErrors] = useState({});
+  const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
   function update(field) {
     return e => setForm(f => ({ ...f, [field]: e.target.value }));
@@ -19,6 +20,7 @@ export default function Demo() {
     if (!form.company.trim()) errs.company = true;
     if (!form.email.trim() || !EMAIL_RE.test(form.email.trim())) errs.email = true;
     if (!form.route.trim()) errs.route = true;
+    if (!privacyAccepted) errs.privacy = true;
     setFieldErrors(errs);
     return Object.keys(errs).length === 0;
   }
@@ -97,11 +99,31 @@ export default function Demo() {
                 <input value={form.route} onChange={update('route')} placeholder={t.phRoute} style={inputStyle(fieldErrors.route)} />
               </div>
 
+              <label style={{
+                display: 'flex', alignItems: 'flex-start', gap: 9, marginTop: 18, cursor: 'pointer',
+              }}>
+                <input
+                  type="checkbox"
+                  checked={privacyAccepted}
+                  onChange={e => { setPrivacyAccepted(e.target.checked); setFieldErrors(fe => ({ ...fe, privacy: false })); }}
+                  style={{ marginTop: 2, width: 15, height: 15, flexShrink: 0, cursor: 'pointer' }}
+                />
+                <span style={{ fontSize: 12.5, lineHeight: 1.5, color: fieldErrors.privacy ? 'var(--coral)' : 'var(--txt3)' }}>
+                  {t.fPrivacyLabel}
+                  <a href="/aviso-de-privacidad" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent)' }}>
+                    {t.fPrivacyLink}
+                  </a>.
+                </span>
+              </label>
+              {fieldErrors.privacy && (
+                <div style={{ fontSize: 11.5, color: 'var(--coral)', marginTop: 5 }}>{t.fPrivacyError}</div>
+              )}
+
               <button
                 onClick={handleSubmit}
                 disabled={status === 'loading'}
                 style={{
-                  marginTop: 22, width: '100%', height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center',
+                  marginTop: 16, width: '100%', height: 50, display: 'flex', alignItems: 'center', justifyContent: 'center',
                   borderRadius: 9, background: 'var(--btnbg)', color: 'var(--btntxt)', fontSize: 15, fontWeight: 700,
                   cursor: status === 'loading' ? 'default' : 'pointer', border: 'none',
                   fontFamily: "'Inter',Arial,sans-serif", opacity: status === 'loading' ? 0.7 : 1,
