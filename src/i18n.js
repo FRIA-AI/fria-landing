@@ -86,6 +86,8 @@ export const ES = {
   fSubmit: "Solicitar demo", fNote: "Te contactaremos en las próximas 24 horas hábiles.",
   fSuccess: "¡Listo! Recibimos tu solicitud — te contactamos pronto.",
   fError: "No se pudo enviar. Intenta de nuevo o escríbenos directo a adolfo.romero@friaai.com.",
+  fPrivacyLabel: "He leído y acepto el ", fPrivacyLink: "Aviso de Privacidad", fPrivacyError: "Debes aceptar el Aviso de Privacidad para continuar.",
+  footerPrivacy: "Aviso de Privacidad",
 
   ctaTitle: "Tu próxima ruta puede cotizarse en cuatro minutos.",
   ctaSub: "Entra a FRIA con tu cuenta y conecta tu correo. El primer RFQ sale el mismo día.",
@@ -179,6 +181,8 @@ export const EN = {
   fSubmit: "Request a demo", fNote: "We'll reach out within 24 business hours.",
   fSuccess: "Done! We got your request — we'll be in touch soon.",
   fError: "Couldn't send it. Try again or email us directly at adolfo.romero@friaai.com.",
+  fPrivacyLabel: "I have read and accept the ", fPrivacyLink: "Privacy Notice", fPrivacyError: "You must accept the Privacy Notice to continue.",
+  footerPrivacy: "Privacy Notice",
 
   ctaTitle: "Your next lane can be quoted in four minutes.",
   ctaSub: "Sign in to FRIA and connect your inbox. The first RFQ goes out the same day.",
