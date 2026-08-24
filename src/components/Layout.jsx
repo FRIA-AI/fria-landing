@@ -86,7 +86,7 @@ function Nav() {
             </button>
           </div>
 
-          <a
+          
             className="nav-cta"
             href={import.meta.env.VITE_APP_URL || 'https://www.friaai.com'}
             style={{
@@ -118,7 +118,7 @@ function ClosingCta() {
         </div>
         <div style={{ fontSize: 16, color: 'var(--txt2)', marginTop: 18 }}>{t.ctaSub}</div>
         <div style={{ display: 'flex', justifyContent: 'center', gap: 14, marginTop: 32, flexWrap: 'wrap' }}>
-          <a
+          
             href={import.meta.env.VITE_APP_URL || 'https://www.friaai.com'}
             style={{
               display: 'inline-flex', alignItems: 'center', height: 52, padding: '0 32px',
@@ -147,6 +147,7 @@ function ClosingCta() {
 
 function Footer() {
   const navigate = useNavigate();
+  const { t } = useSite();
   return (
     <div style={{
       maxWidth: 1200, margin: '0 auto', padding: '36px var(--content-pad-x) 48px',
@@ -156,7 +157,12 @@ function Footer() {
         <Logo height={16} gap={2} barWidth={4} showWordmark={false} />
         <div style={{ fontSize: 13, color: 'var(--txt3)' }}>FRIA · Freight Rate Intelligence</div>
       </div>
-      <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11.5, color: 'var(--txt4)' }}>© 2026 FRIA</div>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
+        <div onClick={() => navigate('/aviso-de-privacidad')} style={{ fontSize: 13, color: 'var(--txt3)', cursor: 'pointer' }}>
+          {t.footerPrivacy}
+        </div>
+        <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11.5, color: 'var(--txt4)' }}>© 2026 FRIA</div>
+      </div>
     </div>
   );
 }
