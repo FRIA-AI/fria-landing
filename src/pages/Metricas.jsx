@@ -36,7 +36,7 @@ export default function Metricas() {
         </div>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'var(--grid-4col)', gap: 16, marginTop: 44 }}>
-          {[[t.m1l, '187'], [t.m2l, '6'], [t.m3l, '24'], [t.m4l, '$41,200']].map(([label, val], i) => (
+          {[[t.m1l, '187'], [t.m2l, '6'], [t.m3l, '24'], [t.m4l, '52']].map(([label, val], i) => (
             <div key={i} style={{ background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 11, padding: '20px 22px', boxShadow: 'var(--cardshadow)' }}>
               <div style={{ fontSize: 11, fontWeight: 600, color: 'var(--txt3)', letterSpacing: '.05em', textTransform: 'uppercase' }}>{label}</div>
               <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 28, fontWeight: 700, marginTop: 8, color: i === 3 ? 'var(--okbd)' : 'var(--txt)' }}>{val}</div>
