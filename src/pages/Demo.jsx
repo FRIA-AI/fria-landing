@@ -58,14 +58,11 @@ export default function Demo() {
           <div style={{ fontSize: 'var(--page-h1-fs)', fontWeight: 700, lineHeight: 1.12, letterSpacing: '-.02em', textWrap: 'pretty' }}>{t.s6title}</div>
           <div style={{ fontSize: 15.5, lineHeight: 1.7, color: 'var(--txt2)', marginTop: 18, textWrap: 'pretty' }}>{t.s6p}</div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12, marginTop: 28, paddingTop: 24, borderTop: '1px solid var(--border)' }}>
-            {[t.dm1, t.dm2, t.dm3].map((d, i) => (
+            {[t.dm1, t.dm2].map((d, i) => (
               <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, fontSize: 14, color: 'var(--txt)' }}>
                 <span style={{ color: 'var(--accent)' }}>●</span> {d}
               </div>
             ))}
-          </div>
-          <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 13, color: 'var(--txt3)', marginTop: 24, paddingTop: 20, borderTop: '1px solid var(--border)' }}>
-            adolfo.romero@friaai.com
           </div>
         </div>
 
