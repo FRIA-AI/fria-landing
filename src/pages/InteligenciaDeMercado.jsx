@@ -1,5 +1,6 @@
 import { useSite } from '../SiteContext';
 import NextCard from '../components/NextCard';
+import Logo from '../components/Logo';
 
 export default function InteligenciaDeMercado() {
   const { t } = useSite();
@@ -40,11 +41,7 @@ export default function InteligenciaDeMercado() {
             <div style={{ background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 14, padding: '26px 28px', boxShadow: 'var(--shadow)' }}>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: 'var(--txt3)', letterSpacing: '.08em' }}>{t.fraiCardHdr}</div>
-                <div style={{ display: 'flex', alignItems: 'flex-end', gap: 2, height: 16 }}>
-                  {[[0.4, 'var(--accent2)', 0.5], [0.65, 'var(--accent2)', 1], [1, 'var(--accent)', 1], [0.8, 'var(--accent3)', 1], [0.55, 'var(--accent2)', 0.5]].map(([h, c, op], i) => (
-                    <div key={i} style={{ width: 4, height: `${h * 100}%`, background: c, borderRadius: 1, opacity: op }} />
-                  ))}
-                </div>
+                <Logo height={16} gap={2} barWidth={4} showWordmark={false} />
               </div>
               <div style={{ fontSize: 16, fontWeight: 700, marginTop: 16 }}>Monterrey <span style={{ color: 'var(--accent)' }}>→</span> Laredo, TX</div>
               <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 11, color: 'var(--txt3)', marginTop: 4 }}>DRY VAN</div>
