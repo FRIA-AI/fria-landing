@@ -58,7 +58,7 @@ export default function Home() {
               borderTop: '1px solid var(--border)',
             }}>
               <div>
-                <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 22, fontWeight: 700, color: 'var(--txt)' }}>4.4 min</div>
+                <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 22, fontWeight: 700, color: 'var(--txt)' }}>2 min</div>
                 <div style={{ fontSize: 11.5, color: 'var(--txt3)', marginTop: 3 }}>{t.stat1}</div>
               </div>
               <div style={{ width: 1, height: 36, background: 'var(--border2)' }} />
