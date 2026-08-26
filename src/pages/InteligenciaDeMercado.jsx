@@ -1,6 +1,7 @@
 import { useSite } from '../SiteContext';
 import NextCard from '../components/NextCard';
 import Logo from '../components/Logo';
+import SEO from '../components/SEO';
 
 export default function InteligenciaDeMercado() {
   const { t } = useSite();
@@ -18,6 +19,11 @@ export default function InteligenciaDeMercado() {
 
   return (
     <>
+      <SEO
+        title="Inteligencia de Mercado — Índice FRAI de tarifas de flete"
+        description="El Índice FRAI estima la tarifa esperada de una ruta antes de la primera respuesta, con base en tarifarios y cotizaciones reales de toda la red de FRIA. Sabe si tu tarifa está dentro de mercado antes de cerrar."
+        path="/inteligencia-de-mercado"
+      />
       {/* FRAI */}
       <div style={{ position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(700px 400px at 80% 20%, var(--glow), transparent 70%)' }} />
@@ -144,34 +150,4 @@ export default function InteligenciaDeMercado() {
                   borderBottom: i < rangeRows.length - 1 ? '1px solid var(--border)' : 'none', fontSize: 13, alignItems: 'center',
                 }}>
                   <div>{lane}</div>
-                  <div style={{ fontSize: 11.5, color: 'var(--txt3)' }}>{eq}</div>
-                  <div style={{ textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", color: 'var(--okbd)' }}>{min}</div>
-                  <div style={{ textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", color: 'var(--txt2)' }}>{max}</div>
-                  <div style={{ textAlign: 'right', fontFamily: "'JetBrains Mono',monospace", color: 'var(--txt2)' }}>{qty}</div>
-                </div>
-              ))}
-              </div>
-            </div>
-
-            <div style={{ background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 12, padding: '24px 26px', boxShadow: 'var(--cardshadow)' }}>
-              <div style={{ fontSize: 15, fontWeight: 700 }}>{t.miHoldTitle}</div>
-              <div style={{ fontSize: 12.5, lineHeight: 1.55, color: 'var(--txt3)', marginTop: 7 }}>{t.miHoldSub}</div>
-              <div style={{ display: 'flex', flexDirection: 'column', marginTop: 18 }}>
-                {holdRows.map(([name, pct, color], i) => (
-                  <div key={i} style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '13px 0', borderTop: '1px solid var(--border)' }}>
-                    <div style={{ fontSize: 13.5 }}>{name}</div>
-                    <div style={{ fontFamily: "'JetBrains Mono',monospace", fontSize: 13, color }}>{pct}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          <div style={{ fontSize: 11.5, color: 'var(--txt4)', marginTop: 18 }}>{t.sampleNote}</div>
-
-          <NextCard to="/demo" labelKey="navDemo" marginTop={48} />
-        </div>
-      </div>
-    </>
-  );
-}
+                  <div
