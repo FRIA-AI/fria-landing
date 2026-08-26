@@ -1,5 +1,6 @@
 import { useSite } from '../SiteContext';
 import NextCard from '../components/NextCard';
+import SEO from '../components/SEO';
 
 export default function QueEs() {
   const { t } = useSite();
@@ -13,6 +14,11 @@ export default function QueEs() {
 
   return (
     <div style={{ borderBottom: '1px solid var(--border)' }}>
+      <SEO
+        title="Qué es FRIA — Cotizador de flete con IA para brokers de carga"
+        description="FRIA automatiza la cotización de transporte terrestre: envía el RFQ a tus carriers desde tu propio correo, interpreta sus respuestas, y arma la cotización de venta. Sin llamadas ni hojas de cálculo."
+        path="/que-es"
+      />
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: 'var(--page-pad)' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'var(--grid-2col)', gap: 56, alignItems: 'start' }}>
           <div style={{ fontSize: 'var(--page-h1-fs)', fontWeight: 700, lineHeight: 1.12, letterSpacing: '-.02em', textWrap: 'pretty' }}>
