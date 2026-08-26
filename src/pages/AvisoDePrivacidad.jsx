@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import SEO from '../components/SEO';
 
 const H2 = { fontSize: 18, fontWeight: 700, marginTop: 32, marginBottom: 10, color: 'var(--txt)' };
 const P = { fontSize: 14.5, lineHeight: 1.75, color: 'var(--txt2)', marginBottom: 12 };
@@ -9,6 +10,12 @@ export default function AvisoDePrivacidad() {
 
   return (
     <div style={{ borderBottom: '1px solid var(--border)' }}>
+      <SEO
+        title="Aviso de Privacidad"
+        description="Aviso de Privacidad de FRIA (Freight Rate Intelligence Agent)."
+        path="/aviso-de-privacidad"
+        noindex
+      />
       <div style={{ maxWidth: 780, margin: '0 auto', padding: 'var(--page-pad)' }}>
         <div onClick={() => navigate(-1)} style={{ fontSize: 13, color: 'var(--txt3)', cursor: 'pointer', marginBottom: 18 }}>
           ← Volver
