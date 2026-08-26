@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSite } from '../SiteContext';
+import SEO from '../components/SEO';
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -49,6 +50,11 @@ export default function Demo() {
 
   return (
     <div style={{ borderBottom: '1px solid var(--border)', position: 'relative', overflow: 'hidden' }}>
+      <SEO
+        title="Agenda una demo con tu ruta real"
+        description="Te mostramos FRIA con una de tus rutas reales — 30 minutos, sin instalar nada ni conectar tu correo todavía. Preparamos la demo con tu caso y te escribimos para agendarla."
+        path="/demo"
+      />
       <div style={{ position: 'absolute', inset: 0, background: 'radial-gradient(800px 400px at 70% 0%, var(--glow), transparent 70%)' }} />
       <div style={{
         position: 'relative', maxWidth: 1200, margin: '0 auto', padding: 'var(--page-pad)',
