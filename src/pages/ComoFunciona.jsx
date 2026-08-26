@@ -1,5 +1,6 @@
 import { useSite } from '../SiteContext';
 import NextCard from '../components/NextCard';
+import SEO from '../components/SEO';
 
 export default function ComoFunciona() {
   const { t } = useSite();
@@ -12,6 +13,11 @@ export default function ComoFunciona() {
 
   return (
     <div style={{ borderBottom: '1px solid var(--border)' }}>
+      <SEO
+        title="Cómo funciona — De la solicitud al PDF de venta en 4 pasos"
+        description="Describe la ruta en lenguaje natural, FRIA envía el RFQ a tus carriers, lee y compara las respuestas, y arma la cotización de venta con tu margen aplicado. Todo dentro de tu correo."
+        path="/como-funciona"
+      />
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: 'var(--page-pad)' }}>
         <div style={{ fontSize: 'var(--page-h1-fs)', fontWeight: 700, lineHeight: 1.12, letterSpacing: '-.02em', maxWidth: 700, textWrap: 'pretty' }}>
           {t.s2title}
