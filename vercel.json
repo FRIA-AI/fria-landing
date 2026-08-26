@@ -1,6 +1,11 @@
 {
-  "cleanUrls": true,
   "rewrites": [
+    { "source": "/que-es", "destination": "/que-es.html" },
+    { "source": "/como-funciona", "destination": "/como-funciona.html" },
+    { "source": "/metricas", "destination": "/metricas.html" },
+    { "source": "/inteligencia-de-mercado", "destination": "/inteligencia-de-mercado.html" },
+    { "source": "/demo", "destination": "/demo.html" },
+    { "source": "/aviso-de-privacidad", "destination": "/aviso-de-privacidad.html" },
     { "source": "/((?!api/).*)", "destination": "/index.html" }
   ]
 }
