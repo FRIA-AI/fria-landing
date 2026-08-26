@@ -1,5 +1,6 @@
 import { useSite } from '../SiteContext';
 import NextCard from '../components/NextCard';
+import SEO from '../components/SEO';
 
 function Bar({ label, value, width, color = 'var(--accent)' }) {
   return (
@@ -29,6 +30,11 @@ export default function Metricas() {
 
   return (
     <div style={{ borderBottom: '1px solid var(--border)' }}>
+      <SEO
+        title="Métricas de cotización para tu equipo comercial"
+        description="Qué cotiza tu equipo, cuánto, en qué rutas y con qué equipo — sin capturar un solo dato. Cada RFQ que sale por FRIA deja registro automático, listo para leer por vendedor, ruta o carrier."
+        path="/metricas"
+      />
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: 'var(--page-pad)' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'var(--grid-2col)', gap: 56, alignItems: 'start' }}>
           <div style={{ fontSize: 'var(--page-h1-fs)', fontWeight: 700, lineHeight: 1.12, letterSpacing: '-.02em', textWrap: 'pretty' }}>{t.s7title}</div>
