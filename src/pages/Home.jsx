@@ -1,5 +1,7 @@
 import { useSite } from '../SiteContext';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 
 export default function Home() {
   const { t } = useSite();
@@ -8,6 +10,34 @@ export default function Home() {
 
   return (
     <>
+      <SEO
+        title="Cotizador de flete terrestre con IA"
+        description="FRIA cotiza transporte terrestre dentro de tu correo: manda el RFQ a tus carriers, lee sus respuestas y entrega la cotización de venta lista para el cliente. Para brokers de carga y forwarders en México y MX-US."
+        path="/"
+      />
+      <Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: 'FRIA',
+            alternateName: 'Freight Rate Intelligence Agent',
+            url: 'https://www.friaai.com',
+            description: 'Plataforma de cotización de flete terrestre e inteligencia de mercado para brokers de carga, freight forwarders, y operadores logísticos en México y el corredor MX-US.',
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareApplication',
+            name: 'FRIA',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Web',
+            description: 'FRIA automatiza la cotización de transporte terrestre: envía el RFQ a los carriers, interpreta sus respuestas, y genera la cotización de venta con margen aplicado.',
+            url: 'https://www.friaai.com',
+          })}
+        </script>
+      </Helmet>
       <div style={{ position: 'relative', borderBottom: '1px solid var(--border)', overflow: 'hidden' }}>
         <div style={{
           position: 'absolute', inset: 0,
