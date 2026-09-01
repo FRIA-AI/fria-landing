@@ -86,7 +86,7 @@ function Nav() {
             </button>
           </div>
 
-          
+<a          
             className="nav-cta"
             href={import.meta.env.VITE_APP_URL || 'https://www.friaai.com'}
             style={{
@@ -118,7 +118,7 @@ function ClosingCta() {
         </div>
         <div style={{ fontSize: 16, color: 'var(--txt2)', marginTop: 18 }}>{t.ctaSub}</div>
         <div style={{ display: 'flex', justifyContent: 'center', gap: 14, marginTop: 32, flexWrap: 'wrap' }}>
-          
+          <a
             href={import.meta.env.VITE_APP_URL || 'https://www.friaai.com'}
             style={{
               display: 'inline-flex', alignItems: 'center', height: 52, padding: '0 32px',
@@ -158,7 +158,7 @@ function Footer() {
         <div style={{ fontSize: 13, color: 'var(--txt3)' }}>FRIA · Freight Rate Intelligence</div>
       </div>
       <div style={{ display: 'flex', alignItems: 'center', gap: 22 }}>
-        
+        <a
           href="https://www.linkedin.com/company/fria-freight-rate-intelligence-agent/"
           target="_blank"
           rel="noopener noreferrer"
